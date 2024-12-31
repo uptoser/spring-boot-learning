@@ -1,4 +1,4 @@
-package me.ibeyond.springboottest.base.model;
+package com.uptoser.springboot.learning.base.model;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

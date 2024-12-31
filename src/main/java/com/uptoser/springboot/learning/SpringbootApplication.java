@@ -1,4 +1,4 @@
-package me.ibeyond.springboottest;
+package com.uptoser.springboot.learning;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,8 +25,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //@MapperScan(value = "me.ibeyond")
 //@ComponentScan(value = "me.ibeyond")
 
-public class SpringbootTestApplication {
+public class SpringbootApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootTestApplication.class, args);
+        SpringApplication.run(SpringbootApplication.class, args);
     }
 }

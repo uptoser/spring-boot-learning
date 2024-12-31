@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.ibeyond</groupId>
-    <artifactId>springboot-test</artifactId>
+    <artifactId>springboot-learning</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springboot-test</name>
+    <name>springboot-learning</name>
     <description>Demo project for Spring Boot</description>
 
     <!--
@@ -19,7 +19,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.6.RELEASE</version>
+        <version>2.3.2.RELEASE</version>
     </parent>
 
     <properties>
@@ -29,46 +29,34 @@
     </properties>
 
     <dependencies>
-        <!--springBoot-->
-        <!--spring-boot-starter-web 构建WEB项目, 比如:tomcat springmvc-->
+        <!--Spring Boot Web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!--Spring Boot 单元测试-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
         <!--引入thymeleaf 启动器-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
+<!--        </dependency>-->
         <!--热部署-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-devtools</artifactId>-->
+<!--        </dependency>-->
         <!--导入配置文件处理器-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-conﬁguration-processor</artifactId>-->
 <!--            <optional>true</optional>-->
 <!--        </dependency>-->
-        <!-- swagger-ui -->
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.7.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.7.0</version>
-            <scope>compile</scope>
-        </dependency>
+
         <!-- mybatis-plus -->
 <!--        <dependency>-->
 <!--            <groupId>com.baomidou</groupId>-->
@@ -96,7 +84,6 @@
     </dependencies>
 
 
-    <!--可以将当前项目打成一个jar包进行运行-->
     <build>
         <plugins>
             <plugin>

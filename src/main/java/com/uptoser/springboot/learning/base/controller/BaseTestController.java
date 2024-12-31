@@ -1,6 +1,5 @@
-package me.ibeyond.springboottest.base.controller;
+package com.uptoser.springboot.learning.base.controller;
 
-import me.ibeyond.springboottest.base.model.Emp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -13,20 +12,22 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class BaseTestController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String index() {
-        return "redirect:swagger-ui.html";
-    }
-
-    @Autowired
-    Emp user1;
-
-    @Value("${config.browser.url}")
-    String name;
-
     @ResponseBody
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
-    public Emp main() {
-        user1.setName(this.name);
-        return user1;
+    public String index() {
+//        return "redirect:swagger-ui.html";
+        return "Hello World";
     }
+//
+//    @Autowired
+//    Emp user1;
+//
+//    @Value("${config.browser.url}")
+//    String name;
+//
+//    @ResponseBody
+//    @RequestMapping(value = "/test", method = RequestMethod.GET)
+//    public Emp main() {
+//        user1.setName(this.name);
+//        return user1;
+//    }
 }
