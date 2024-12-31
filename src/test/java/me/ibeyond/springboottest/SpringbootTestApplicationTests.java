@@ -1,5 +1,6 @@
 package me.ibeyond.springboottest;
 
+import me.ibeyond.springboottest.base.model.Emp;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
