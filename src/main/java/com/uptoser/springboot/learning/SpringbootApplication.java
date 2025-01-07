@@ -1,5 +1,6 @@
 package com.uptoser.springboot.learning;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -25,7 +26,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 //@EnableDiscoveryClient
 @SpringBootApplication
 //@ImportResource({"classpath:spring-dataSource.xml"})
-//@MapperScan(value = "me.ibeyond")
+//mapperScan扫描到其他组件有可能会出现多个bean存在的情况： required a single bean, but 2 were found
+@MapperScan(value = "com.uptoser.springboot.learning.*.mapper")
 //@ComponentScan(value = "me.ibeyond")
 
 public class SpringbootApplication {

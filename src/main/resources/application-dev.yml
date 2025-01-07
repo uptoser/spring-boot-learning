@@ -14,7 +14,12 @@ spring:
       maxWait: 60000
       timeBetweenEvictionRunsMillis: 60000
 
-mybatis:
+mybatis-plus:
   config-location: classpath:mybatis-config.xml
-  mapper-locations: classpath*:mapper/**/*Mapper.xml
+#  type-aliases-package: com.uptoser.cashbook.entities
+#  mapper-locations: classpath*:mapper/**/*Mapper.xml
 
+swagger:
+  title: 接口文档
+  description: 接口
+  exclude-path: /error # 剔除请求
