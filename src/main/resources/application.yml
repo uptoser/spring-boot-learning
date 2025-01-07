@@ -1,22 +1,24 @@
 spring:
   profiles:
     active: dev
-emp:
-  name: "Ming \n Hello"
+
+# 自定义的属性值
+property-values :
+  email: "Ming@abc.com \n Hello"
   age: 22
   salary: 10000
-  map: {a: 1,b: 2,c: 3}
+  map: {a: 1,b: 2,c: Three}
   list:
     - 1
     - java
     - 2
     - c++
-  set: {1,2,3,4,c}
+  set: {1,2,3,4,5}
+
 config:
   browser:
     open: true
     url: "http://localhost:8080"
     execute: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
-
 
 

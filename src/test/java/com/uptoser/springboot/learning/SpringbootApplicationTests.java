@@ -1,6 +1,6 @@
 package com.uptoser.springboot.learning;
 
-import com.uptoser.springboot.learning.base.model.Emp;
+import com.uptoser.springboot.learning.base.properties.vo.LoadingPropertiesValues;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -15,7 +15,7 @@ public class SpringbootApplicationTests {
 
 	Logger logger = LoggerFactory.getLogger(getClass());
 	@Autowired
-	private Emp emp;
+	private LoadingPropertiesValues emp;
 
 	@Test
 	public void contextLoads() {

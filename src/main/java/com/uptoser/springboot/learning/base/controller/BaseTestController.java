@@ -1,7 +1,5 @@
 package com.uptoser.springboot.learning.base.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,8 +12,8 @@ public class BaseTestController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     @ResponseBody
     public String index() {
-//        return "redirect:swagger-ui.html";
-        return "Hello World";
+        return "redirect:swagger-ui/index.html";
+//        return "Hello World";
     }
 //
 //    @Autowired

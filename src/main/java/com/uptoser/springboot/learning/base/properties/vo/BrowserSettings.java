@@ -1,4 +1,4 @@
-package com.uptoser.springboot.learning.base.model;
+package com.uptoser.springboot.learning.base.properties.vo;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "config.browser")
 
-public class OpenBrowserSettings {
+public class BrowserSettings {
     private boolean open = false;
     private String execute = "cmd /c start";
     private String url = "http://localhost:8080";
