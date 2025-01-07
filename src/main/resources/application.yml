@@ -2,6 +2,11 @@ spring:
   profiles:
     active: dev
 
+server:
+  port: 8080
+  servlet:
+    context-path: /springboot
+
 # 自定义的属性值
 property-values :
   email: "Ming@abc.com \n Hello"
@@ -13,12 +18,7 @@ property-values :
     - java
     - 2
     - c++
-  set: {1,2,3,4,5}
 
-config:
-  browser:
-    open: true
-    url: "http://localhost:8080"
-    execute: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+
 
 

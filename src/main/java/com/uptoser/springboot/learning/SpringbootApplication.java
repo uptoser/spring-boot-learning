@@ -22,6 +22,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //@EnableDiscoveryClient
 @SpringBootApplication
+//@ImportResource({"classpath:spring-dataSource.xml"})
 //@MapperScan(value = "me.ibeyond")
 //@ComponentScan(value = "me.ibeyond")
 

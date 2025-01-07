@@ -1,11 +1,9 @@
 package com.uptoser.springboot.learning;
 
-import com.uptoser.springboot.learning.base.properties.vo.LoadingPropertiesValues;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -14,12 +12,9 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class SpringbootApplicationTests {
 
 	Logger logger = LoggerFactory.getLogger(getClass());
-	@Autowired
-	private LoadingPropertiesValues emp;
 
 	@Test
 	public void contextLoads() {
-		System.out.println(emp);
 		// 1. 下面定义的都是日志级别，由低到高：trace< debug< info< warn< error
 		// 2. Spring Boot默认设定的是 info 级别日志（日志默认级别也称为root级别）
 		// 3. 可以通过配置文件进行修改 日志级别，设置某一个级别后，就只打印高寒的这个级别及后面更高级别的日志信息
