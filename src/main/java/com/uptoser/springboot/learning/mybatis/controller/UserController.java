@@ -4,6 +4,7 @@ package com.uptoser.springboot.learning.mybatis.controller;
 import com.uptoser.springboot.learning.base.entity.ResponseEntity;
 import com.uptoser.springboot.learning.mybatis.entities.User;
 import com.uptoser.springboot.learning.mybatis.service.IUserService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/sys/user")
+@Api(tags = "系统相关/用户管理")
 public class UserController {
     @Autowired
     private IUserService userService;

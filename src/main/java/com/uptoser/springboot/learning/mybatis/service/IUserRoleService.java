@@ -1,6 +1,7 @@
 package com.uptoser.springboot.learning.mybatis.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.uptoser.springboot.learning.mybatis.entities.Role;
 import com.uptoser.springboot.learning.mybatis.entities.UserRole;
 
 /**
@@ -12,5 +13,5 @@ import com.uptoser.springboot.learning.mybatis.entities.UserRole;
  * @since 2025-01-07
  */
 public interface IUserRoleService extends IService<UserRole> {
-
+    Role test();
 }

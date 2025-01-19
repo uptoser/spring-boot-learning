@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.uptoser.springboot.learning.base.entity.ResponseEntity;
 import com.uptoser.springboot.learning.mybatis.entities.Role;
 import com.uptoser.springboot.learning.mybatis.service.IRoleService;
+import com.uptoser.springboot.learning.mybatis.service.IUserRoleService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -26,7 +27,14 @@ import java.util.List;
 public class RoleController {
     @Autowired
     IRoleService roleService;
+    @Autowired
+    IUserRoleService userRoleService;
 
+    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @ApiOperation(value = "测试导入其他mapper")
+    public ResponseEntity<Role> test() {
+        return new ResponseEntity<>(200, "成功", userRoleService.test());
+    }
     @RequestMapping(value = "/role", method = RequestMethod.GET)
     @ApiOperation(value = "获取角色")
     @ApiImplicitParams({ @ApiImplicitParam(paramType = "query",  name = "id", value = "id", required = true) })
