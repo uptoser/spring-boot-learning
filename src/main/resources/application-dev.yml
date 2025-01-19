@@ -17,9 +17,9 @@ spring:
 mybatis-plus:
   config-location: classpath:mybatis-config.xml
 #  type-aliases-package: com.uptoser.cashbook.entities
-#  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  mapper-locations: classpath:com/uptoser/springboot/learning/**/mapper/xml/*Mapper.xml
 
 swagger:
   title: 接口文档
   description: 接口
-  exclude-path: /error # 剔除请求
+  exclude-path: ${server.servlet.context-path}/error # 剔除请求

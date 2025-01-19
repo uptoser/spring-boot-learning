@@ -3,6 +3,7 @@ package com.uptoser.springboot.learning.base.config;
 import com.google.common.base.Function;
 import com.google.common.base.Optional;
 import com.google.common.base.Predicate;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -10,7 +11,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import springfox.documentation.RequestHandler;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
-import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.oas.annotations.EnableOpenApi;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
@@ -24,15 +24,17 @@ import springfox.documentation.spring.web.plugins.Docket;
 public class SwaggerConfig implements WebMvcConfigurer {
     // 定义分隔符,配置Swagger多包
     private static final String splitor = ";";
+    @Value("${server.servlet.context-path}")
+    private String contextPath;
     @Bean
     public Docket createRestApi1() {
         return new Docket(DocumentationType.OAS_30)
-                .apiInfo(apiInfo("商品接口文档", "", "1.0.0"))
+                .groupName("系统相关")//.pathMapping("/")
+                .apiInfo(apiInfo("系统相关接口文档", "", "1.0.0"))
                 .host("localhost:8080")
                 .select().apis(SwaggerConfig.basePackage("com.uptoser"))
-                .paths(PathSelectors.ant("/product/**"))
+                .paths(PathSelectors.ant(contextPath+"/sys/**"))//url系统模块
                 .build()
-                .groupName("1-商品接口文档").pathMapping("/")
                 // 支持的通讯协议集合
 //                .protocols(newHashSet("https", "http"))
                 // 授权信息设置，必要的header token等认证信息
@@ -43,16 +45,16 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     }
 
-    @Bean
-    public Docket createRestApi2() {
-        return new Docket(DocumentationType.SWAGGER_2)
-                .apiInfo(apiInfo("全部接口文档", "", "1.0.0"))
-                .select().apis(RequestHandlerSelectors.any())
-                .paths(PathSelectors.any())
-                .build()
-                .groupName("2-全部接口文档").pathMapping("/")
-                ;
-    }
+//    @Bean
+//    public Docket createRestApi2() {
+//        return new Docket(DocumentationType.SWAGGER_2)
+//                .groupName("全部接口")//.pathMapping("/")
+//                .apiInfo(apiInfo("全部接口文档", "", "1.0.0"))
+//                .select().apis(RequestHandlerSelectors.any())
+//                .paths(PathSelectors.any())
+//                .build()
+//                ;
+//    }
 
     /**
      * 页创建该API的基本信息（这些基本信息会展现在文档页面中）

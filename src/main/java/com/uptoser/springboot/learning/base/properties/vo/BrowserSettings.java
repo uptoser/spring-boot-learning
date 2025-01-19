@@ -1,5 +1,6 @@
 package com.uptoser.springboot.learning.base.properties.vo;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
@@ -8,9 +9,12 @@ import org.springframework.stereotype.Component;
 @PropertySource(value = {"classpath:browser-settings.properties"})//加载局部配置文件
 @ConfigurationProperties(prefix = "config.browser")
 public class BrowserSettings {
+    @Value("${server.servlet.context-path}")
+    private String contextPath;
     private boolean open = false;
     private String execute = "cmd /c start";
-    private String url = "http://localhost:8080/springboot";
+    private String url = "http://localhost:8080"+contextPath;
+
 
 
     public boolean isOpen() {
@@ -35,5 +39,13 @@ public class BrowserSettings {
 
     public void setUrl(String url) {
         this.url = url;
+    }
+
+    public String getContextPath() {
+        return contextPath;
+    }
+
+    public void setContextPath(String contextPath) {
+        this.contextPath = contextPath;
     }
 }

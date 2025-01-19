@@ -3,9 +3,11 @@ spring:
     active: dev
   application:
     name: springboot
+  # 格式化Date日期对象，如果格式化LocalDateTime需要配置Json序列化器
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+    default-property-inclusion: non_null # 不处理空值
 
 server:
   port: 8080
