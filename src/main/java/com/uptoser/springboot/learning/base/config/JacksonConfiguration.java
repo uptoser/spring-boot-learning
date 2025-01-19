@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Json格式化LocalDateTime配置
+ *
  */
 @Configuration
 public class JacksonConfiguration {
@@ -19,6 +19,7 @@ public class JacksonConfiguration {
     @ConditionalOnProperty("spring.jackson.date-format")
     public Jackson2ObjectMapperBuilderCustomizer jackson2ObjectMapperBuilderCustomizer(@Value("${spring.jackson.date-format}") String pattern) {
         return builder -> {
+            //Json格式化LocalDateTime配置
             DateTimeFormatter dateTimeFormatter =  DateTimeFormatter.ofPattern(pattern);
             builder.serializers(new LocalDateTimeSerializer(dateTimeFormatter));
             builder.deserializers(new LocalDateTimeDeserializer(dateTimeFormatter));
