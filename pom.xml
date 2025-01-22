@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>me.ibeyond</groupId>
-    <artifactId>springboot-learning</artifactId>
+    <artifactId>spring-boot-learning</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>springboot-learning</name>
+    <name>spring-boot-learning</name>
     <description>Demo project for Spring Boot</description>
 
     <!--
