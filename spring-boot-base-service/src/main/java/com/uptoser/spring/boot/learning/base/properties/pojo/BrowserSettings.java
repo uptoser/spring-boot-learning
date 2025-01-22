@@ -1,4 +1,4 @@
-package com.uptoser.spring.boot.learning.base.properties.vo;
+package com.uptoser.spring.boot.learning.base.properties.pojo;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;

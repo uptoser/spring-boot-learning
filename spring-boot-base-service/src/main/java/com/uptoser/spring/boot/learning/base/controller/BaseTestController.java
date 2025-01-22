@@ -1,6 +1,6 @@
 package com.uptoser.spring.boot.learning.base.controller;
 
-import com.uptoser.spring.boot.learning.base.properties.vo.LoadingPropertiesValues;
+import com.uptoser.spring.boot.learning.base.properties.pojo.LoadingPropertiesValues;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;

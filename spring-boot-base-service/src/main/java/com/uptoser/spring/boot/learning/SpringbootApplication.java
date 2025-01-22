@@ -3,6 +3,7 @@ package com.uptoser.spring.boot.learning;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ImportResource;
 
 /**
  *
@@ -23,12 +24,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *    @ComponentScan 被该 注解 标识的类,会被spring容器进行管理.
  */
 
-//@EnableDiscoveryClient
 @SpringBootApplication
 //@ImportResource({"classpath:spring-dataSource.xml"})
 //mapperScan扫描到其他组件有可能会出现多个bean存在的情况： required a single bean, but 2 were found
 @MapperScan(value = "com.uptoser.spring.boot.learning.*.mapper")
-//@ComponentScan(value = "me.ibeyond")
+//@ComponentScan(value = "com.uptoser")
 
 public class SpringbootApplication {
     public static void main(String[] args) {

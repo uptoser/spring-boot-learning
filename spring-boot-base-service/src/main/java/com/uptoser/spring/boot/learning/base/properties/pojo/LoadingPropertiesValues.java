@@ -1,4 +1,4 @@
-package com.uptoser.spring.boot.learning.base.properties.vo;
+package com.uptoser.spring.boot.learning.base.properties.pojo;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

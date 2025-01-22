@@ -22,4 +22,6 @@ mybatis-plus:
 swagger:
   title: 接口文档
   description: 接口
-  exclude-path: ${server.servlet.context-path}/error # 剔除请求
+  exclude-path: /actuator/**,${server.servlet.context-path}/error # 剔除请求
+  authorization:
+    key-name: Authorization-Token

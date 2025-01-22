@@ -1,6 +1,6 @@
 package com.uptoser.spring.boot.learning.base.runner;
 
-import com.uptoser.spring.boot.learning.base.properties.vo.BrowserSettings;
+import com.uptoser.spring.boot.learning.base.properties.pojo.BrowserSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
