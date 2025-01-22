@@ -1,4 +1,4 @@
-package com.gupaoedu.book.dubbo;
+package com.uptoser.spring.boot.learning;
 
 import static org.junit.Assert.assertTrue;
 

@@ -1,4 +1,4 @@
-package com.gupaoedu.book.dubbo.provider;
+package com.uptoser.spring.boot.learning.dubbo.provider;
 
 import org.apache.dubbo.config.spring.context.annotation.DubboComponentScan;
 import org.springframework.boot.SpringApplication;

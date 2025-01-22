@@ -1,4 +1,4 @@
-package com.gupaoedu.book.dubbo.provider;
+package com.uptoser.spring.boot.learning.provider;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
