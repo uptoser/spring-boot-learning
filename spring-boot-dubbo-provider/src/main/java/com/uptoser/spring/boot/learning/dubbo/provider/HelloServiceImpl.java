@@ -1,6 +1,6 @@
 package com.uptoser.spring.boot.learning.dubbo.provider;
 
-import com.uptoser.spring.boot.learning.IHelloService;
+import com.uptoser.spring.boot.learning.api.service.IHelloService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Value;
 
