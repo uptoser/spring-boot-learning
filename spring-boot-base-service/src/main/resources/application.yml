@@ -9,6 +9,12 @@ spring:
     time-zone: GMT+8
     default-property-inclusion: non_null # 不处理空值
 
+dubbo:
+  application:
+    name: springboot-consumer
+  registry:
+    address: N/A
+
 server:
   port: 8080
   servlet:

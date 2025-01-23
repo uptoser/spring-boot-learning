@@ -11,6 +11,8 @@ public class HelloServiceImpl implements IHelloService {
 
     @Override
     public String sayHello(String name) {
+        System.out.printf("The message received is [%s]\n",name);
         return String.format("[%s]：Hello,%s",serviceName,name);
     }
+
 }

@@ -1,8 +1,12 @@
 package com.uptoser.spring.boot.learning;
 
+import com.uptoser.spring.boot.learning.api.service.IHelloService;
+import org.apache.dubbo.config.annotation.Reference;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportResource;
 
 /**
@@ -31,6 +35,15 @@ import org.springframework.context.annotation.ImportResource;
 //@ComponentScan(value = "com.uptoser")
 
 public class SpringbootApplication {
+
+    @Reference(url = "dubbo://192.168.3.11:20880/com.uptoser.spring.boot.learning.api.service.IHelloService")
+    private IHelloService helloService;
+
+    @Bean
+    public ApplicationRunner runner(){
+        return args -> System.out.println(helloService.sayHello("Mic"));
+    }
+
     public static void main(String[] args) {
         SpringApplication.run(SpringbootApplication.class, args);
     }
