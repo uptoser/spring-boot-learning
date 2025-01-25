@@ -1,10 +1,11 @@
 package com.uptoser.spring.boot.learning.dubbo.provider;
 
 import com.uptoser.spring.boot.learning.api.service.IHelloService;
+import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.dubbo.config.annotation.Service;
 import org.springframework.beans.factory.annotation.Value;
 
-@Service
+@DubboService
 public class HelloServiceImpl implements IHelloService {
     @Value("${dubbo.application.name}")
     private String serviceName;
