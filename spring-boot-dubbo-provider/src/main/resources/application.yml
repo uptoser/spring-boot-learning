@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: springboot-dubbo-demo
+
+dubbo:
+  application:
+    name: springboot-provider
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+#    address: N/A
+    address: zookeeper://192.168.3.200:2181
+#    address: nacos://192.168.3.200:8848
+    timeout: 100000
+
+
+
