@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @DubboComponentScan
 @SpringBootApplication
-public class ProviderApplication {
+public class SpringBootDubboProviderApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ProviderApplication.class, args);
+        SpringApplication.run(SpringBootDubboProviderApplication.class, args);
     }
 }

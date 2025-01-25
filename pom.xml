@@ -11,9 +11,10 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>spring-boot-base-service</module>
         <module>spring-boot-api</module>
+        <module>spring-boot-base-service</module>
         <module>spring-boot-dubbo-provider</module>
+        <module>spring-boot-nacos</module>
     </modules>
 
     <parent>
