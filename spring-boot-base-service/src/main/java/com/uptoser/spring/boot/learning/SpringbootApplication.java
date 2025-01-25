@@ -37,13 +37,13 @@ import org.springframework.context.annotation.ImportResource;
 
 public class SpringbootApplication {
 
-    @DubboReference(url = "dubbo://192.168.3.11:20880/com.uptoser.spring.boot.learning.api.service.IHelloService")
-    private IHelloService helloService;
-
-    @Bean
-    public ApplicationRunner runner(){
-        return args -> System.out.println(helloService.sayHello("Mic"));
-    }
+//    @DubboReference(url = "dubbo://192.168.3.11:20880/com.uptoser.spring.boot.learning.api.service.IHelloService")
+//    private IHelloService helloService;
+//
+//    @Bean
+//    public ApplicationRunner runner(){
+//        return args -> System.out.println(helloService.sayHello("Mic"));
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootApplication.class, args);
