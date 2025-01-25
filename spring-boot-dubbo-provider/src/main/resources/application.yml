@@ -4,7 +4,7 @@ spring:
 
 dubbo:
   application:
-    name: springboot-provider
+    name: springboot-dubbo-provider
   protocol:
     name: dubbo
     port: 20880
