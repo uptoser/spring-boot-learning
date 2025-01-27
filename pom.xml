@@ -15,6 +15,7 @@
         <module>spring-boot-base-service</module>
         <module>spring-boot-dubbo-provider</module>
         <module>spring-boot-nacos</module>
+        <module>redis-spring-boot-starter</module>
     </modules>
 
     <parent>
