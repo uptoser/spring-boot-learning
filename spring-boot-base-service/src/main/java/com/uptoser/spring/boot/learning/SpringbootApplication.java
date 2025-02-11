@@ -13,6 +13,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  *
@@ -59,7 +61,8 @@ import org.springframework.context.annotation.ImportResource;
 //mapperScan扫描到其他组件有可能会出现多个bean存在的情况： required a single bean, but 2 were found
 @MapperScan(value = "com.uptoser.spring.boot.learning.*.mapper")
 //@ComponentScan(value = "com.uptoser")
-
+@EnableScheduling //开启注解版的定时任务
+@EnableAsync //开启基于注解版的异步处理
 public class SpringbootApplication {
 
 //    @DubboReference(url = "dubbo://192.168.3.11:20880/com.uptoser.spring.boot.learning.api.service.IHelloService")
